@@ -10,6 +10,7 @@ De instructie van deze leertaak staan in de [WIKI](https://github.com/fdnd-task/
 
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
+  * [Gebruik](#gebruik)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
@@ -18,9 +19,13 @@ De instructie van deze leertaak staan in de [WIKI](https://github.com/fdnd-task/
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+## Gebruik
+
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
+
+## Bronnen
 
 
 ## Licentie
