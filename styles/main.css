@@ -1,0 +1,15 @@
+/* CSS */
+
+:root {
+    color-scheme: light dark;
+    --fg: light-dark(#333, #fff);
+    --bg: light-dark(#fff, #333);
+    --accent: light-dark(oklch(0.4 0.22 265), oklch(from #1f4ed8 l c h));
+}
+
+/* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Geist', sans-serif;
+}
