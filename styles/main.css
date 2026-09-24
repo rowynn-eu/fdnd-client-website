@@ -4,7 +4,7 @@
     color-scheme: light dark;
     --fg: light-dark(#333, #fff);
     --bg: light-dark(#fff, #333);
-    --accent: light-dark(oklch(0.4 0.22 265), oklch(from #1f4ed8 l c h));
+    --accent: light-dark(#1f4ed8, #1f4ed8);
 }
 
 /* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
