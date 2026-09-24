@@ -11,5 +11,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+    color-scheme: light;
+
     font-family: 'Geist', sans-serif;
+
+    color: var(--fg);
+    background: var(--bg);
+
+    margin: 1em 10em;
+
+    display: grid;
+}
+
+h1 {
+    span {
+        color: var(--accent);
+    }
+}
+
+.recent-grid {
+    list-style: none;
+    padding-left: 0em;
 }
