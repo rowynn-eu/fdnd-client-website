@@ -1,5 +1,8 @@
 /* CSS */
 
+* {box-sizing:border-box;}
+
+
 :root {
     color-scheme: light dark;
     --fg: light-dark(#333, #fff);
@@ -15,13 +18,11 @@ body {
     color-scheme: light;
 
     font-family: 'Geist', sans-serif;
-
+    font-display:swap;
     color: var(--fg);
     background: var(--bg);
-
-    margin: 1em 10em;
-
     display: grid;
+    margin: 1em;
 }
 
 h1 {
