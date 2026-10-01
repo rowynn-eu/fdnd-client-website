@@ -242,6 +242,7 @@ footer {
     grid-template-columns: 1fr;
     color: var(--accent-text);
     background: var(--accent);
+    padding: 0em 3em;
     a {
         color: var(--accent-text);
     }
