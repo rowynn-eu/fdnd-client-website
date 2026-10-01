@@ -5,6 +5,9 @@ We gebruiken de custom property naming system in het NL Design System.
 
 */
 
+/* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
 *::before,
 *,
 *::after {
@@ -19,49 +22,33 @@ We gebruiken de custom property naming system in het NL Design System.
     --accent-text: light-dark(#fff, #fff);
 }
 
-/* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
-@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
-
 body {
-    /* dark-theme toggle feature maken later en hieronder uncommenten */
+    /* tijdelijk alleen light ondersteuning, want dark-mode toggle werkt niet. voor volgende sprint. */
     color-scheme: light;
-
+    height: 100svh;
     margin: 0;
     padding: 0;
+
     /* typografie */
     font-family: 'Geist', sans-serif;
-    font-weight: 400 700;
-    font-size: clamp(16px, 1.5vh, 2rem);
-    font-display: swap;
+    font-weight: 400;
     line-height: 1.4;
     color: var(--fg);
     background: var(--bg);
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
     h1 {
-        font-size: clamp(48px, 3rem, 4rem);
+        font-size: 3rem;
         span {
             color: var(--accent);
         }
-    }
-
-    h2 {
-        font-size: clamp(36px, 2.25rem, 3.25rem);
-    }
-
-    h3 {
-        font-size: clamp(32px, 2rem, 3rem);
-    }
-
-    h4 {
-        font-size: clamp(24px, 1.5rem, 2.5rem);
-    }
-
-    h5 {
-        font-size: clamp(20px, 1.5rem, 2.5rem);
-    }
-
-    h6 {
-        font-size: clamp(16px, 1rem, 2rem);
     }
 }
 
