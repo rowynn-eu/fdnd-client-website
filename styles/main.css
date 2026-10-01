@@ -116,6 +116,26 @@ main {
         order: -1;
         width: 100%;
         border-bottom: solid 1px var(--accent);
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 1em;
+            padding: 2em 1em;
+            border-top: var(--fg) 1px solid;
+            img {
+                height: 5vh;
+            }
+            input {
+                display: flex;
+                flex-grow: 1;
+                border: var(--accent) 2px solid;
+                font-size: 1em;
+                padding: 1em;
+                margin-bottom: 5em;
+            }
+        }
     }
     section {
         max-width: 90ch;
@@ -128,24 +148,6 @@ main {
         text-decoration: none;
         &:hover {
             text-decoration-line: underline;
-        }
-    }
-
-    label {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        gap: 1em;
-        padding: 2em 1em;
-        border-top: var(--fg) 1px solid;
-
-        input {
-            display: flex;
-            flex-grow: 1;
-            border: var(--accent) 2px solid;
-            font-size: 1em;
-            padding: 1em;
-            margin-bottom: 5em;
         }
     }
 
