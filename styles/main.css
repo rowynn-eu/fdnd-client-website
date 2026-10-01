@@ -49,6 +49,13 @@ body {
             color: var(--accent);
         }
     }
+
+    @media (min-width: 600px) {
+        footer {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0em;
+        }
+    }
 }
 
 header {
@@ -57,35 +64,89 @@ header {
     position: sticky;
     top: 0;
 
+    line-height: 1;
+
     display: flex;
     justify-content: space-between;
+    padding: 0 2em;
     align-items: center;
     gap: 1em;
     padding-bottom: 0.125em;
     border-bottom: 1px solid var(--fg);
+
+    nav > a,
+    nav > a:visited,
+    > a:nth-of-type(2) {
+        color: var(--fg);
+        text-decoration: none;
+        padding: 0.25em;
+        &:hover {
+            color: var(--accent-text);
+            background-color: var(--accent);
+            border-radius: 10%;
+        }
+    }
     button {
-        line-height: 1;
+        flex-basis: 5%;
         background: none;
         border: none;
         font-size: 2rem;
         &:hover {
             color: var(--bg);
             background: var(--accent);
-            border-radius: 25%;
+            border-radius: 10%;
         }
     }
     /* github */
-    a:nth-of-type(2) img {
-        width: 1em;
+    > a:nth-of-type(2) img {
+        width: 1.5em;
     }
     nav {
+        margin-left: auto;
         display: flex;
         gap: 1em;
-        margin-left: auto;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    section {
+        max-width: 90ch;
+    }
+
+    a,
+    a:visited {
+        color: var(--accent);
+        text-decoration: none;
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+
+    label {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 1em;
+        input {
+            border: none;
+            background: var(--accent);
+            color: var(--accent-text);
+        }
+    }
+
+    div {
+        justify-self: center;
+        display: flex;
     }
 }
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr;
     color: var(--accent-text);
     background: var(--accent);
     a {
