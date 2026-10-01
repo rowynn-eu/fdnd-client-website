@@ -201,10 +201,9 @@ main {
 
     .recent-grid {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-items: start;
-
-        gap: 1em;
+        gap: 4em;
         list-style: none;
         padding-left: 0em;
 
@@ -212,9 +211,21 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            flex-wrap: wrap;
             img {
                 width: 100px;
             }
+        }
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (min-width: 1500px) {
+            grid-template-columns: repeat(6, 1fr);
         }
     }
 }
