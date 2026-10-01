@@ -113,6 +113,10 @@ main {
     grid-template-columns: 1fr;
     justify-items: center;
 
+    .hero {
+        order: -1;
+        width: 100%;
+    }
     section {
         max-width: 90ch;
         padding-bottom: 3em;
