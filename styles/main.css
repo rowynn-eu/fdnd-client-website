@@ -191,6 +191,10 @@ main {
         > section:nth-of-type(3) {
             grid-area: section-3;
         }
+
+        section > img {
+            width: 5vh;
+        }
     }
 
     .recent-grid {
