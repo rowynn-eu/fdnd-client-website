@@ -17,7 +17,8 @@
                 <a href="./rechtenvrij.html">Rechtenvrij</a>
                 <a href="./credits.html">Credits</a>
             </nav>
-            <button id="theme-toggle">☀</button>
+            <!-- Ik heb het verborgen met aria-label, omdat het alleen wat uitmaakt als je ziende ben. -->
+            <button id="theme-toggle" aria-hidden="false">☀</button>
             <a href="https://github.com/OpenGemeenten/Iconenset/" target="_blank">
                 <img src="./assets/github-light.svg" alt="GitHub Logo">
                 <span>GitHub</span>
@@ -33,7 +34,7 @@
                 </p>
                 <label for="zoeken">Zoeken</label>
                 <input type="search" id="zoeken" placeholder="Bekijk 240+ iconen" name="q">
-                <button><img src=""></button>
+                <button aria-label="Zoeken"><img src=""></button>
                 <div class="stats">
                     <strong>250</strong>
                     <p>Iconen</p>
