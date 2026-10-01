@@ -116,6 +116,7 @@ main {
     .hero {
         order: -1;
         width: 100%;
+        border-bottom: solid 1px var(--accent);
     }
     section {
         max-width: 90ch;
