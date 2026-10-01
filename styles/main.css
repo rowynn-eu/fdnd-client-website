@@ -115,6 +115,7 @@ main {
 
     section {
         max-width: 90ch;
+        padding-bottom: 3em;
     }
 
     a,
@@ -131,16 +132,61 @@ main {
         justify-content: center;
         align-content: center;
         gap: 1em;
+        padding: 2em 1em;
+        border-top: var(--fg) 1px solid;
+
         input {
-            border: none;
-            background: var(--accent);
-            color: var(--accent-text);
+            display: flex;
+            flex-grow: 1;
+            border: var(--accent) 2px solid;
+            font-size: 1em;
+            padding: 1em;
+            margin-bottom: 5em;
         }
     }
 
     div {
         justify-self: center;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
+
+        strong {
+            font-size: 2em;
+            grid-row-start: 1;
+        }
+        p {
+            grid-row-start: 2;
+        }
+    }
+
+    .illustraties {
+        article {
+            width: fit-content;
+            background: var(--bg);
+            padding: 1em;
+        }
+    }
+
+    .gebruik {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'header header header'
+            'section-1 section-2 section-3';
+        gap: 1em;
+        h2 {
+            grid-area: header;
+        }
+        > section:nth-of-type(1) {
+            grid-area: section-1;
+        }
+        > section:nth-of-type(2) {
+            grid-area: section-2;
+        }
+        > section:nth-of-type(3) {
+            grid-area: section-3;
+        }
     }
 }
 
