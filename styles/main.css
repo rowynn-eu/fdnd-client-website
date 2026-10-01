@@ -1,7 +1,15 @@
-/* CSS */
+/*
 
-* {box-sizing:border-box;}
+We gebruiken de custom property naming system in het NL Design System.
 
+
+*/
+
+*::before,
+*,
+*::after {
+    box-sizing: border-box;
+}
 
 :root {
     color-scheme: light dark;
@@ -15,26 +23,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+    /* dark-theme toggle feature maken later en hieronder uncommenten */
     color-scheme: light;
 
+    margin: 0;
+    padding: 0;
+    /* typografie */
     font-family: 'Geist', sans-serif;
-    font-display:swap;
+    font-weight: 400 700;
+    font-size: clamp(16px, 1.5vh, 2rem);
+    font-display: swap;
+    line-height: 1.4;
     color: var(--fg);
     background: var(--bg);
-    display: grid;
-    margin: 1em;
+
+    h1 {
+        font-size: clamp(48px, 3rem, 4rem);
+        span {
+            color: var(--accent);
+        }
+    }
+
+    h2 {
+        font-size: clamp(36px, 2.25rem, 3.25rem);
+    }
+
+    h3 {
+        font-size: clamp(32px, 2rem, 3rem);
+    }
+
+    h4 {
+        font-size: clamp(24px, 1.5rem, 2.5rem);
+    }
+
+    h5 {
+        font-size: clamp(20px, 1.5rem, 2.5rem);
+    }
+
+    h6 {
+        font-size: clamp(16px, 1rem, 2rem);
+    }
 }
 
-h1 {
-    span {
-        color: var(--accent);
+header {
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--fg);
+    button {
+        font-size: 3rem;
+    }
+    nav {
+        display: flex;
+        gap: 1em;
+        margin-left: auto;
     }
 }
 
 footer {
     color: var(--accent-text);
     background: var(--accent);
-
     a {
         color: var(--accent-text);
     }

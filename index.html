@@ -5,29 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gemeenteiconen | Iconenset voor overheidssites</title>
         <link rel="stylesheet" href="./styles/main.css">
+        <script defer src="theme-toggle.js"></script>
     </head>
     <body>
         <header>
-            <img src="./assets/logo.svg">
+            <a href="./"><img src="./assets/logo.svg"></a>
             <nav>
                 <a href="./iconen.html">Iconen</a>
                 <a href="./illustraties.html">Illustraties</a>
                 <a href="./doe-mee.html">Doe mee</a>
                 <a href="./rechtenvrij.html">Rechtenvrij</a>
                 <a href="./credits.html">Credits</a>
-                <a href="https://github.com/OpenGemeenten/Iconenset/" target="_blank">
-                    <img src="./assets/github-light.svg" alt="GitHub Logo">
-                    <span>GitHub</span>
-                </a>
             </nav>
+            <button id="theme-toggle">☀</button>
+            <a href="https://github.com/OpenGemeenten/Iconenset/" target="_blank">
+                <img src="./assets/github-light.svg" alt="GitHub Logo">
+                <span>GitHub</span>
+            </a>
         </header>
         <main>
             <!-- Korte hero sectie dat meteen je aandacht pakt -->
             <section class="hero">
                 <h1>Een iconenset, <span>open en rechtenvrij</span>, voor elke gemeentelijke website.</h1>
                 <p>
-                    Ontwikkeld door OpenGemeenten en gemeente Veenendaal. Bedoeld voor toptaken, formulieren en
-                    navigatie op overheidssites — in vier varianten zodat het altijd past bij jouw ontwerp.
+                    Bedoeld voor toptaken, formulieren en navigatie op overheidssites — in vier varianten zodat het
+                    altijd past bij jouw ontwerp.
                 </p>
                 <label for="zoeken">Zoeken</label>
                 <input type="search" id="zoeken" placeholder="Bekijk 240+ iconen" name="q">
