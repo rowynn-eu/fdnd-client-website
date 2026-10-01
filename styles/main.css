@@ -167,6 +167,7 @@ main {
     }
 
     .illustraties {
+        justify-self: center;
         article {
             width: fit-content;
             background: var(--bg);
