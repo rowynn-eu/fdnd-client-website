@@ -202,8 +202,20 @@ main {
     .recent-grid {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
+        align-items: start;
+
+        gap: 1em;
         list-style: none;
         padding-left: 0em;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 100px;
+            }
+        }
     }
 }
 
