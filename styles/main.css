@@ -192,6 +192,13 @@ main {
             grid-area: section-3;
         }
     }
+
+    .recent-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        list-style: none;
+        padding-left: 0em;
+    }
 }
 
 footer {
@@ -202,9 +209,4 @@ footer {
     a {
         color: var(--accent-text);
     }
-}
-
-.recent-grid {
-    list-style: none;
-    padding-left: 0em;
 }
