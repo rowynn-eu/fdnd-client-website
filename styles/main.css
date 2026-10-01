@@ -171,6 +171,12 @@ main {
             width: fit-content;
             background: var(--bg);
             padding: 1em;
+
+            img {
+                height: 25vh;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
         }
     }
 
