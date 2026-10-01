@@ -64,7 +64,15 @@ header {
     padding-bottom: 0.125em;
     border-bottom: 1px solid var(--fg);
     button {
-        font-size: 3rem;
+        line-height: 1;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        &:hover {
+            color: var(--bg);
+            background: var(--accent);
+            border-radius: 25%;
+        }
     }
     nav {
         display: flex;
