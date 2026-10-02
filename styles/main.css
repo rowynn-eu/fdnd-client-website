@@ -77,6 +77,9 @@ header {
 
     nav > a {
         display: none;
+        @media (min-width: 600px) {
+            display: inherit;
+        }
     }
 
     nav > a,
@@ -103,9 +106,17 @@ header {
         }
     }
     /* github */
-    > a:nth-of-type(2) img {
-        width: 1.5em;
+    > a:nth-of-type(2) {
+        img {
+            width: 1.5em;
+        }
+        &::after {
+            @media (min-width: 600px) {
+                content: 'Github';
+            }
+        }
     }
+
     nav {
         margin-left: auto;
         display: flex;
