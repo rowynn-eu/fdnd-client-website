@@ -236,7 +236,7 @@ main {
         align-items: start;
         gap: 4em;
         list-style: none;
-        padding-left: 0em;
+        /* padding-left: 0em; */
         width: 100%;
 
         a {
@@ -350,30 +350,40 @@ main {
     }
 
     .voorbeelden {
+        width: 100%;
+        text-wrap: pretty;
         ul {
             list-style: none;
-            display: inline-grid;
-            grid-template-columns: repeat(auto-fit, 10em);
-            align-content: center;
-            justify-content: center;
-            gap: 0.25em;
-        }
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 200px);
+            align-items: center;
+            gap: 1em;
 
-        img {
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            width: min(100%, 30em);
-            justify-self: start;
-            align-self: start;
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-            &:hover {
-                box-shadow: 0.5em 0.5em 0em 0em;
-                transform: translateY(-1em);
+            a {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                padding: 1em;
+                border: 1px solid var(--fg);
+                border-radius: var(--knop-radius);
                 transition:
-                    transform 0.5s ease,
-                    box-shadow 0.1s ease;
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                &:hover {
+                    text-decoration-line: underline;
+                    box-shadow: 0.25em 0.25em 0em 0em;
+                    transform: translateY(-0.5em);
+                    transition:
+                        transform 0.5s ease,
+                        box-shadow 0.1s ease;
+                }
+                img {
+                    aspect-ratio: 4 / 3;
+                    object-fit: cover;
+                    width: min(100%, 30em);
+                    justify-self: start;
+                    align-self: start;
+                }
             }
         }
     }
