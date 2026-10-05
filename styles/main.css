@@ -12,8 +12,8 @@
     --fg: light-dark(#333, #fff);
     --bg: light-dark(#fff, #333);
     --accent: light-dark(#1f4ed8, #1f4ed8);
-    --accent-text: light-dark(#fff, #fff);
-    --whitespace-s: 1em;
+    --accent-tekst: light-dark(#fff, #fff);
+    --witruimte-s: 1em;
 }
 
 body {
@@ -87,7 +87,7 @@ header {
         text-decoration: none;
         padding: 0.25em;
         &:hover {
-            color: var(--accent-text);
+            color: var(--accent-tekst);
             background-color: var(--accent);
             border-radius: 10%;
         }
@@ -118,7 +118,7 @@ header {
     nav {
         margin-left: auto;
         display: flex;
-        gap: 1em;
+        gap: var(--witruimte-s);
     }
 }
 
@@ -136,7 +136,7 @@ main {
             display: flex;
             justify-content: center;
             align-content: center;
-            gap: 1em;
+            gap: var(--witruimte-s);
             padding: 2em 1em;
             border-top: var(--fg) 1px solid;
             img {
@@ -170,7 +170,7 @@ main {
         justify-self: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1em;
+        gap: var(--witruimte-s);
 
         strong {
             font-size: 2em;
@@ -246,7 +246,7 @@ main {
 
     .gebruik {
         display: grid;
-        gap: 1em;
+        gap: var(--witruimte-s);
 
         @media (width > 44em) {
             grid-template-columns: 1fr 1fr 1fr;
@@ -277,12 +277,12 @@ main {
 }
 
 footer {
-    color: var(--accent-text);
+    color: var(--accent-tekst);
     background: var(--accent);
 
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-items: start;
 
     width: 100vw;
     padding: 0em 3em;
@@ -291,10 +291,10 @@ footer {
         max-width: 90ch;
     }
     a {
-        color: var(--accent-text);
+        color: var(--accent-tekst);
     }
-    @media (min-width: 600px) {
+    /* @media (min-width: 600px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 0em;
-    }
+    } */
 }
