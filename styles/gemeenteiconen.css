@@ -47,7 +47,8 @@ body {
     }
     h1 {
         padding-top: 1em;
-        font-size: clamp(2.5rem, -0.8333rem + 16.6667vw, 3rem); /* Sanne */
+        font-size: clamp(2.5rem, -0.7333rem + 16.6667vw, 3rem); /* Sanne */
+        text-wrap: pretty;
         span {
             color: var(--accent);
         }
@@ -157,6 +158,12 @@ main {
         order: -1;
         width: 100%;
         border-bottom: solid 1px var(--accent);
+
+        .hero-image {
+            display: block;
+            justify-self: center;
+            width: 50%;
+        }
 
         label {
             display: flex;
