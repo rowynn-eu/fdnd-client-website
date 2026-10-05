@@ -61,7 +61,6 @@ body {
 }
 
 header {
-    margin: 1em;
     background-color: var(--bg);
     z-index: 1;
     position: sticky;
@@ -172,6 +171,7 @@ main {
         border-bottom: solid 1px var(--accent);
 
         .hero-image {
+            order: -1;
             display: block;
             justify-self: center;
             width: clamp(14rem, 1.7647rem + 61.1765vw, 40rem);
