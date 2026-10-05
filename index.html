@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gemeenteiconen | Iconenset voor overheidssites</title>
         <link rel="stylesheet" href="./styles/gemeenteiconen.css">
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
         <script defer src="theme-toggle.js"></script>
     </head>
 
@@ -25,13 +26,14 @@
             </a>
             <!-- Ik heb het verborgen met aria-label, omdat het alleen wat uitmaakt als je ziende ben. -->
             <button id="theme-toggle" aria-hidden="true">☀</button>
-            <button id="mobile-menu" aria-hidden="false">☰</button>
+            <button id="mobile-menu" aria-hidden="false" aria-label="menu">☰</button>
         </header>
 
         <main>
             <!-- Korte hero sectie da2t meteen je aandacht pakt -->
             <section class="hero">
                 <h1><span>Open en rechtenvrije</span> iconen, voor elke gemeentelijke website.</h1>
+                <div aria-hidden="true"></div>
                 <p>
                     Ontwikkeled door OpenGemeenten. Bedoeld voor toptaken, formulieren en navigatie op overheidssites — in vier
                     varianten zodat het altijd past bij jouw ontwerp.
