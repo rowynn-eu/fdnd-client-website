@@ -14,6 +14,8 @@
     --accent: light-dark(#1f4ed8, #1f4ed8);
     --accent-tekst: light-dark(#fff, #fff);
     --witruimte-s: 1em;
+    --knop-padding: 0.5em;
+    --knop-radius: 0.5em;
 }
 
 body {
@@ -28,6 +30,12 @@ body {
     line-height: 1.4;
     color: var(--fg);
     background: var(--bg);
+
+    a,
+    button,
+    input {
+        cursor: pointer;
+    }
 
     h1,
     h2,
@@ -45,7 +53,7 @@ body {
     }
 
     p {
-        max-width: 32em;
+        max-width: 48em;
         text-wrap: pretty;
     }
 }
@@ -73,6 +81,12 @@ header {
         display: block;
     }
 
+    nav {
+        margin-left: auto;
+        display: flex;
+        gap: var(--witruimte-s);
+    }
+
     nav > a {
         display: none;
         @media (min-width: 600px) {
@@ -93,18 +107,6 @@ header {
         }
     }
 
-    button {
-        flex-basis: 5%;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        &:hover {
-            color: var(--bg);
-            background: var(--accent);
-            border-radius: 10%;
-        }
-    }
-
     /* github */
     > a:nth-of-type(2) {
         img {
@@ -117,10 +119,16 @@ header {
         }
     }
 
-    nav {
-        margin-left: auto;
-        display: flex;
-        gap: var(--witruimte-s);
+    button {
+        flex-basis: 5%;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        &:hover {
+            color: var(--bg);
+            background: var(--accent);
+            border-radius: 10%;
+        }
     }
 }
 
@@ -129,6 +137,20 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+
+    section {
+        max-width: 90ch;
+        padding-bottom: 3em;
+    }
+
+    a,
+    a:visited {
+        color: var(--accent);
+        text-decoration: none;
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
 
     .hero {
         order: -1;
@@ -156,20 +178,7 @@ main {
         }
     }
 
-    section {
-        max-width: 90ch;
-        padding-bottom: 3em;
-    }
-
-    a,
-    a:visited {
-        color: var(--accent);
-        text-decoration: none;
-        &:hover {
-            text-decoration-line: underline;
-        }
-    }
-
+    /* Accenten, iconen, publiek domein ,etc etc.. */
     div {
         justify-self: center;
         display: grid;
@@ -231,26 +240,25 @@ main {
         } */
     }
 
-    .illustraties {
-        justify-self: center;
-        article {
-            width: fit-content;
-            background: var(--bg);
-            padding: 1em;
-
-            img {
-                /* height: 25vh; */
-                aspect-ratio: 4 / 3;
-                object-fit: cover;
-
-                width: min(100%, 25em);
-            }
-        }
-    }
-
     .gebruik {
         display: grid;
         gap: var(--witruimte-s);
+
+        section > img {
+            width: 5vh;
+        }
+
+        a,
+        a:visited {
+            padding: var(--knop-padding);
+            border-radius: var(--knop-radius);
+            color: var(--accent-tekst);
+            background: var(--accent);
+            text-decoration: none;
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
 
         @media (width > 44em) {
             grid-template-columns: 1fr 1fr 1fr;
@@ -273,9 +281,35 @@ main {
                 grid-area: section-3;
             }
         }
+    }
 
-        section > img {
-            width: 5vh;
+    .illustraties {
+        justify-self: center;
+        margin-left: auto;
+        article {
+            width: fit-content;
+            background: var(--bg);
+            padding: 1em;
+
+            img {
+                /* height: 25vh; */
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+
+                width: min(100%, 25em);
+            }
+        }
+
+        a,
+        a:visited {
+            padding: var(--knop-padding);
+            border-radius: var(--knop-radius);
+            color: var(--accent-tekst);
+            background: var(--accent);
+            text-decoration: none;
+            &:hover {
+                text-decoration-line: underline;
+            }
         }
     }
 }
@@ -285,10 +319,9 @@ footer {
     background: var(--accent);
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    justify-items: start;
-
-    width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
+    /* align-items: start; */
+    /* width: 100vw; */
     padding: 0em 3em;
 
     section {
@@ -297,8 +330,13 @@ footer {
     a {
         color: var(--accent-tekst);
     }
-    /* @media (min-width: 600px) {
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+        align-self: auto;
+        column-gap: calc(100% / 6);
+    }
+    @media (min-width: 900px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 0em;
-    } */
+        gap: 2em;
+    }
 }
