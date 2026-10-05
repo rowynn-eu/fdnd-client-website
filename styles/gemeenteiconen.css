@@ -342,8 +342,8 @@ footer {
         gap: 2em;
     }
 }
-/* 
-.marquee {
+
+/* .marquee {
     display: none;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -367,14 +367,14 @@ footer {
 
             img {
                 display: inline-block;
-                /* width: 100%;
-            height: 100%; */
+                width: 100%;
+            height: 100%;
             }
         }
     }
-}
+} */
 
-@keyframes --scroll-animatie {
+/* @keyframes --scroll-animatie {
     from {
         translate: 100%;
     }
