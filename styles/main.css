@@ -38,7 +38,7 @@ body {
         font-weight: 600;
     }
     h1 {
-        font-size: clamp(2.5rem, -0.8333rem + 16.6667vw, 3rem);
+        font-size: clamp(2.5rem, -0.8333rem + 16.6667vw, 3rem); /* Sanne */
         span {
             color: var(--accent);
         }
@@ -61,14 +61,14 @@ header {
 
     display: flex;
     justify-content: space-between;
-    padding: 0 clamp(0rem, -3.5556rem + 17.7778vw, 2rem);
+    padding: 0 clamp(0rem, -3.5556rem + 17.7778vw, 2rem); /* Sanne/utopia.fyi */
     align-items: center;
-    gap: clamp(0.5rem, -0.3889rem + 4.4444vw, 1rem);
+    gap: clamp(0.5rem, -0.3889rem + 4.4444vw, 1rem); /* Sanne/utopia.fyi */
     padding-bottom: 0.125em;
     border-bottom: 1px solid var(--fg);
 
     .logo img {
-        width: clamp(8rem, -2.6667rem + 53.3333vw, 14rem);
+        width: clamp(8rem, -2.6667rem + 53.3333vw, 14rem); /* Sanne/utopia.fyi */
         height: auto;
         display: block;
     }
@@ -197,7 +197,7 @@ main {
     .recent-grid {
         display: grid;
         /* grid-template-columns: repeat(3, 1fr); */
-        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-columns: repeat(auto-fit, 100px); /* Sanne */
         align-items: start;
         gap: 4em;
         list-style: none;
@@ -281,7 +281,7 @@ footer {
     background: var(--accent);
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 1fr);
     justify-items: start;
 
     width: 100vw;
