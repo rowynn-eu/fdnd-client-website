@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.973785,0,0,0.973785,-19.512823,-22.532746)">
+        <circle cx="85.761" cy="88.862" r="36.969"/>
+    </g>
+    <g transform="matrix(1,0,0,1.330078,4.071518,-3.674469)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(0,1,-1.330078,0,129.700242,4.071518)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(0,1,-1.330078,0,32.995408,4.071518)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.330078,4.071518,95.90636)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(0.707107,0.707107,-0.940507,0.940507,69.572106,-31.627079)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(0.707107,0.707107,-0.940507,0.940507,-7.731195,45.676222)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(-0.707107,0.707107,-0.940507,-0.940507,82.323778,-7.731195)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+    <g transform="matrix(-0.707107,0.707107,-0.940507,-0.940507,159.627079,69.572106)">
+        <path d="M59.928,18.342L59.928,7.065" style="fill:none;stroke:black;stroke-width:5.1px;"/>
+    </g>
+</svg>

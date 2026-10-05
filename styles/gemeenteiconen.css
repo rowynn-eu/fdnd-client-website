@@ -21,7 +21,7 @@
 body {
     /* tijdelijk alleen light ondersteuning, want dark-mode toggle werkt niet. voor volgende sprint. */
     color-scheme: light;
-    height: 100svh;
+    /* height: 100svh; */
     margin: 0;
 
     /* typografie */
@@ -46,9 +46,9 @@ body {
         font-weight: 600;
     }
     h1 {
-        padding-top: 1em;
+        /* padding-top: 1em; */
         font-size: clamp(2.5rem, -0.7333rem + 16.6667vw, 3rem); /* Sanne */
-        text-wrap: pretty;
+        /* text-wrap: pretty; */
         span {
             color: var(--accent);
         }
@@ -112,10 +112,17 @@ header {
     /* github */
     > a:nth-of-type(2) {
         img {
-            width: 1.5em;
+            width: 20px;
+            &:hover {
+                filter: brightness(0) invert(1);
+            }
         }
-        &::after {
-            @media (min-width: 600px) {
+        @media (min-width: 600px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.15em;
+            &::after {
                 content: 'Github';
             }
         }
@@ -125,11 +132,16 @@ header {
         flex-basis: 5%;
         background: none;
         border: none;
-        font-size: 2rem;
+        img {
+            width: 20px;
+        }
         &:hover {
             color: var(--bg);
             background: var(--accent);
             border-radius: 10%;
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
@@ -162,7 +174,7 @@ main {
         .hero-image {
             display: block;
             justify-self: center;
-            width: 50%;
+            width: clamp(14rem, 1.7647rem + 61.1765vw, 40rem);
         }
 
         label {
@@ -255,7 +267,7 @@ main {
         gap: var(--witruimte-s);
 
         section > img {
-            width: 5vh;
+            width: 3em;
         }
 
         a,
