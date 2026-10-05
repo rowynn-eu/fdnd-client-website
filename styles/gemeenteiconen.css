@@ -294,12 +294,26 @@ main {
             background: var(--bg);
             padding: 1em;
 
-            img {
-                /* height: 25vh; */
-                aspect-ratio: 4 / 3;
-                object-fit: cover;
+            .gallerij {
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr;
+                align-content: center;
+                justify-content: center;
+                gap: 0.25em;
 
-                width: min(100%, 20em);
+                img {
+                    /* height: 25vh; */
+                    aspect-ratio: 4 / 3;
+                    object-fit: cover;
+                    width: min(100%, 20em);
+                    justify-self: start;
+                    align-self: start;
+                }
+
+                @media (width > 45em) {
+                    grid-template-columns: 21em 21em;
+                    gap: 0.5em;
+                }
             }
         }
 
