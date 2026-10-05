@@ -46,6 +46,7 @@ body {
         font-weight: 600;
     }
     h1 {
+        padding-top: 1em;
         font-size: clamp(2.5rem, -0.8333rem + 16.6667vw, 3rem); /* Sanne */
         span {
             color: var(--accent);
@@ -139,7 +140,7 @@ main {
     justify-items: center;
 
     section {
-        max-width: 90ch;
+        max-width: 100ch;
         padding-bottom: 3em;
     }
 
