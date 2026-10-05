@@ -1,10 +1,3 @@
-/*
-
-We gebruiken de custom property naming system in het NL Design System.
-
-
-*/
-
 /* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -20,6 +13,7 @@ We gebruiken de custom property naming system in het NL Design System.
     --bg: light-dark(#fff, #333);
     --accent: light-dark(#1f4ed8, #1f4ed8);
     --accent-text: light-dark(#fff, #fff);
+    --whitespace-s: 1em;
 }
 
 body {
@@ -196,6 +190,43 @@ main {
         }
     }
 
+    .recent {
+        width: 100%;
+    }
+
+    .recent-grid {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(auto-fit, 100px);
+        align-items: start;
+        gap: 4em;
+        list-style: none;
+        padding-left: 0em;
+        width: 100%;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            img {
+                width: 100px;
+            }
+        }
+
+        /* @media (min-width: 600px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media (min-width: 1500px) {
+            grid-template-columns: repeat(6, 1fr);
+        } */
+    }
+
     .illustraties {
         justify-self: center;
         article {
@@ -242,43 +273,6 @@ main {
         section > img {
             width: 5vh;
         }
-    }
-
-    .recent {
-        width: 100%;
-    }
-
-    .recent-grid {
-        display: grid;
-        /* grid-template-columns: repeat(3, 1fr); */
-        grid-template-columns: repeat(auto-fit, 100px);
-        align-items: start;
-        gap: 4em;
-        list-style: none;
-        padding-left: 0em;
-        width: 100%;
-
-        a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-wrap: wrap;
-            text-align: center;
-            img {
-                width: 100px;
-            }
-        }
-
-        /* @media (min-width: 600px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        @media (min-width: 1200px) {
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        @media (min-width: 1500px) {
-            grid-template-columns: repeat(6, 1fr);
-        } */
     }
 }
 
