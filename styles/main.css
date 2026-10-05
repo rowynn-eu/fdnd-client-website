@@ -49,13 +49,6 @@ body {
             color: var(--accent);
         }
     }
-
-    @media (min-width: 600px) {
-        footer {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 0em;
-        }
-    }
 }
 
 header {
@@ -63,7 +56,7 @@ header {
     background-color: var(--bg);
     z-index: 1;
     position: sticky;
-    top: 0;
+    top: 0px;
 
     line-height: 1;
 
@@ -270,5 +263,9 @@ footer {
     }
     a {
         color: var(--accent-text);
+    }
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0em;
     }
 }
