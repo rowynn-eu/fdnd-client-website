@@ -284,8 +284,8 @@ main {
     }
 
     .illustraties {
-        justify-self: center;
-        margin-left: auto;
+        justify-self: inline;
+
         article {
             width: fit-content;
             background: var(--bg);
