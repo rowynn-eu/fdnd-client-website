@@ -29,9 +29,7 @@ let currentTheme = savedTheme ?? (prefersDark.matches ? "dark" : "light")
 
 themeToggle.addEventListener("click", toggleTheme)
 
-if (savedTheme) {
-    rootHTML.dataset.theme = savedTheme
-}
+rootHTML.dataset.theme = savedTheme
 
 function toggleTheme() {
     rootHTML.dataset.theme = currentTheme
@@ -39,15 +37,14 @@ function toggleTheme() {
 
     if (currentTheme === "dark") {
         currentTheme = "light"
-        console.log("currentTheme = LIGHT")
+        console.log("currentTheme: Dark")
     } else {
         currentTheme = "dark"
-        console.log("currentTheme = DARK")
+        console.log("currentTheme: Light")
     }
 }
 
-console.log(savedTheme)
-console.log(themeToggle)
-console.log(prefersDark)
-console.log(toggleTheme)
-console.log(prefersDark)
+console.log("Current Theme:", currentTheme)
+console.log("Saved Theme:", savedTheme)
+console.log("Element selected:", themeToggle)
+console.log("User prefers:", prefersDark)
