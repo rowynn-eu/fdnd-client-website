@@ -193,24 +193,18 @@ header {
             width: 20px;
             height: 25px;
         }
-        @media (min-width: 800px) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.15em;
-            text-decoration: none;
-            &::after {
-                color: var(--fg);
-                content: "Github";
-            }
-        }
     }
 
     @media (min-width: 800px) {
         button[id="mobile-menu"] {
             display: none;
         }
-
+        a {
+            border-radius: 10%;
+            &:hover {
+                translate: 0 -1px;
+            }
+        }
         nav {
             color: var(--fg);
             background-color: var(--bg);
@@ -234,6 +228,10 @@ header {
                 background: var(--bg);
                 text-decoration: none;
                 padding: 0;
+                &:hover {
+                    color: var(--accent-tekst);
+                    background-color: var(--accent);
+                }
             }
         }
         a:nth-child(n + 2),
@@ -247,10 +245,24 @@ header {
             &:hover {
                 color: var(--bg);
                 background: var(--accent);
-                border-radius: 10%;
                 img {
                     filter: brightness(0) invert(1);
                 }
+            }
+        }
+
+        a[href="https://github.com/OpenGemeenten/Iconenset/"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.15em;
+            text-decoration: none;
+            color: var(--fg);
+            &::after {
+                content: "Github";
+            }
+            &:hover {
+                filter: var(--bg);
             }
         }
     }
@@ -441,8 +453,8 @@ main {
                 }
 
                 @media (width > 45em) {
-                    grid-template-columns: 21em 21em;
-                    gap: 0.5em;
+                    grid-template-columns: 20em 20em;
+                    /* gap: 0.5em; */
                 }
             }
         }
