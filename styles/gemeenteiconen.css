@@ -1,4 +1,11 @@
-/* imports de Geist fonts van gemeenteiconen.nl's huiststijl */
+/*                                                                   
+┳┓┏┓┓ ┏┓┏┳┓┳┓  ┏┓┳┳
+┣┫┃┃┃┃┃┗┫┃┃┃┃━━┣ ┃┃
+┛┗┗┛┗┻┛┗┛┛┗┛┗  ┗┛┗┛    
+Ascii Art font: Tmplr
+navigatie comments gemaakt met https://patorjk.com/software/taag/                                                                          
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
 
 *::before,
@@ -18,13 +25,17 @@
     --knop-radius: 0.5em;
 }
 
+/*
+┳┓┏┓┳┓┓┏
+┣┫┃┃┃┃┗┫
+┻┛┗┛┻┛┗┛
+*/
+
 body {
     /* tijdelijk alleen light ondersteuning, want dark-mode toggle werkt niet. voor volgende sprint. */
     color-scheme: light;
-    /* height: 100svh; */
     margin: 0;
 
-    /* typografie */
     font-family: "Geist", sans-serif;
     font-weight: 400;
     line-height: 1.4;
@@ -60,60 +71,89 @@ body {
     }
 }
 
-header {
-    background-color: var(--bg);
-    z-index: 1;
-    position: sticky;
-    top: 0px;
+/*
+┓┏┏┓┏┓┳┓┏┓┳┓
+┣┫┣ ┣┫┃┃┣ ┣┫
+┛┗┗┛┛┗┻┛┗┛┛┗
+*/
 
-    line-height: 1;
+header {
+    z-index: 1;
+    color: var(--fg);
+    background-color: var(--bg);
+    padding: 0 clamp(0rem, -3.5556rem + 17.7778vw, 2rem); /* ty sanne! */
+    border-bottom: 1px solid var(--fg);
 
     display: flex;
     justify-content: space-between;
-    padding: 0 clamp(0rem, -3.5556rem + 17.7778vw, 2rem); /* Sanne/utopia.fyi */
     align-items: center;
-    gap: clamp(0.5rem, -0.3889rem + 4.4444vw, 1rem); /* Sanne/utopia.fyi */
-    padding-bottom: 0.125em;
-    border-bottom: 1px solid var(--fg);
+    gap: clamp(0.5rem, -0.3889rem + 4.4444vw, 1rem); /* ty sanne! */
 
-    .logo img {
-        width: clamp(8rem, -2.6667rem + 53.3333vw, 14rem); /* Sanne/utopia.fyi */
-        height: auto;
-        display: block;
-    }
+    position: sticky;
+    top: 0;
 
-    nav {
-        margin-left: auto;
-        display: flex;
-        gap: var(--witruimte-s);
-    }
-
-    nav > a,
-    nav > a:visited,
-    > a:nth-of-type(2) {
+    a:nth-child(n + 2),
+    a:visited:nth-child(n + 2) {
         color: var(--fg);
         text-decoration: none;
-        padding: 0.25em;
         &:hover {
             color: var(--accent-tekst);
             background-color: var(--accent);
-            border-radius: 10%;
         }
     }
 
-    nav > a {
-        display: none;
-        @media (min-width: 800px) {
-            display: inherit;
+    .logo img {
+        width: clamp(8rem, -2.6667rem + 53.3333vw, 14rem); /* ty sanne! */
+        height: auto;
+    }
+
+    nav {
+        background-color: var(--accent);
+        position: fixed;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        padding: var(--witruimte-s);
+        gap: var(--witruimte-s);
+
+        translate: 100%;
+
+        > a,
+        a:visited {
+            color: var(--fg);
+            background-color: var(--accent-tekst);
+            text-decoration: none;
+
+            padding: var(--witruimte-s);
         }
     }
-    /* github */
-    > a:nth-of-type(2) {
+    .is-open {
+        translate: unset;
+    }
+    button {
+        background: none;
+        border: none;
         img {
             width: 20px;
-            &:hover {
+            height: 25px;
+        }
+        &:hover {
+            color: var(--bg);
+            background: var(--accent);
+            border-radius: 10%;
+            img {
                 filter: brightness(0) invert(1);
             }
+        }
+    }
+    a[href="https://github.com/OpenGemeenten/Iconenset/"] {
+        padding: 0 6px;
+        img {
+            width: 20px;
+            height: 25px;
         }
         @media (min-width: 800px) {
             display: flex;
@@ -126,30 +166,61 @@ header {
         }
     }
 
-    button {
-        flex-basis: 5%;
-        background: none;
-        border: none;
-        img {
-            width: 20px;
+    @media (min-width: 800px) {
+        [id="mobile-menu"] {
+            display: none;
         }
-        &:hover {
-            color: var(--bg);
-            background: var(--accent);
-            border-radius: 10%;
+
+        nav {
+            color: var(--fg);
+            background-color: var(--bg);
+
+            position: static;
+            inset: unset;
+
+            flex-direction: row;
+            align-items: center;
+            justify-content: stretch;
+            padding: 0;
+
+            margin-left: auto;
+
+            translate: 0%;
+            text-wrap: balance;
+
+            & > a,
+            > a:visited {
+                color: var(--fg);
+                background: var(--bg);
+                text-decoration: none;
+                padding: 0;
+            }
+        }
+        a:nth-child(n + 2),
+        button {
+            background: none;
+            border: none;
             img {
-                filter: brightness(0) invert(1);
+                width: 20px;
+                height: 25px;
+            }
+            &:hover {
+                color: var(--bg);
+                background: var(--accent);
+                border-radius: 10%;
+                img {
+                    filter: brightness(0) invert(1);
+                }
             }
         }
     }
-
-    [id="mobile-menu"] {
-        width: min-content;
-        @media (min-width: 800px) {
-            display: none;
-        }
-    }
 }
+
+/*
+┳┳┓┏┓┳┳┓
+┃┃┃┣┫┃┃┃
+┛ ┗┛┗┻┛┗
+*/
 
 main {
     margin: 1em;
@@ -214,7 +285,6 @@ main {
         }
     }
 
-    /* Accenten, iconen, publiek domein ,etc etc.. */
     .facts {
         justify-self: center;
         display: grid;
@@ -245,12 +315,10 @@ main {
 
     .recent-grid {
         display: grid;
-        /* grid-template-columns: repeat(3, 1fr); */
-        grid-template-columns: repeat(auto-fit, 100px); /* Sanne */
+        grid-template-columns: repeat(auto-fit, 100px); /* ty sanne! */
         align-items: start;
         gap: 4em;
         list-style: none;
-        /* padding-left: 0em; */
         width: 100%;
 
         a {
@@ -263,17 +331,6 @@ main {
                 width: 100px;
             }
         }
-
-        /* @media (min-width: 800px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        @media (min-width: 1200px) {
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        @media (min-width: 1500px) {
-            grid-template-columns: repeat(6, 1fr);
-        } */
     }
 
     .gebruik {
@@ -403,6 +460,12 @@ main {
     }
 }
 
+/*
+┏┓┏┓┏┓┏┳┓┏┓┳┓
+┣ ┃┃┃┃ ┃ ┣ ┣┫
+┻ ┗┛┗┛ ┻ ┗┛┛┗
+*/
+
 footer {
     color: var(--accent-tekst);
     background: var(--accent);
@@ -419,62 +482,4 @@ footer {
     a {
         color: var(--accent-tekst);
     }
-    /* @media (min-width: 800px) {
-        grid-template-columns: 1fr 1fr;
-        align-self: auto;
-        column-gap: calc(100% / 6);
-    }
-    @media (min-width: 900px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2em;
-    } */
 }
-
-/* .marquee {
-    display: none;
-
-    @media (prefers-reduced-motion: no-preference) {
-        display: flex;
-        width: 100%;
-        div {
-            display: flex;
-            height: 100px;
-            overflow: hidden;
-            position: relative;
-            animation-name: --scroll-animatie;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            &:nth-of-type(2) {
-                animation-name: --scroll-animatie-2;
-            }
-            &:hover {
-                animation-play-state: paused;
-            }
-
-            img {
-                display: inline-block;
-                width: 100%;
-            height: 100%;
-            }
-        }
-    }
-} */
-
-/* @keyframes --scroll-animatie {
-    from {
-        translate: 100%;
-    }
-    to {
-        translate: -100%;
-    }
-}
-
-@keyframes --scroll-animatie-2 {
-    from {
-        translate: -100%;
-    }
-    to {
-        translate: 100%;
-    }
-} */
