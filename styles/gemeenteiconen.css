@@ -18,7 +18,7 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
     color-scheme: light dark;
     --fg: light-dark(#333, #fff);
     --bg: light-dark(#fff, #333);
-    --accent: light-dark(#1f4ed8, hsl(200, 80%, 70%));
+    --accent: light-dark(#1f4ed8, hsl(200, 100%, 40%));
     --accent-tekst: light-dark(#fff, #fff);
     --witruimte-s: 1em;
     --knop-padding: 0.5em;
@@ -40,10 +40,14 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
             filter: invert(1);
         }
     }
+
+    nav {
+        color: var(--fg);
+        /* background-color: var(--bg); */
+    }
 }
 
 /*
-┳┓┏┓┳┓┓┏
 ┣┫┃┃┃┃┗┫
 ┻┛┗┛┻┛┗┛
 */
@@ -109,8 +113,8 @@ header {
     position: sticky;
     top: 0;
 
-    a:nth-child(n + 2),
-    a:visited:nth-child(n + 2) {
+    a:nth-child(-n),
+    a:visited:nth-child(-n) {
         color: var(--fg);
         text-decoration: none;
         &:hover {
@@ -125,6 +129,7 @@ header {
     }
 
     nav {
+        z-index: 2;
         background-color: var(--accent);
         position: fixed;
         inset: 0;
@@ -141,10 +146,15 @@ header {
         > a,
         a:visited {
             color: var(--fg);
-            border: 1px solid var(--accent-tekst);
+            background-color: var(--bg);
+            border: 1px solid var(--bg);
             text-decoration: none;
 
             padding: var(--witruimte-s);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            transition: translate 0.3s;
         }
     }
 
@@ -153,11 +163,11 @@ header {
     }
 
     button[id="mobile-menu"] {
-        z-index: 2;
+        z-index: 3;
     }
 
     &:has(.is-open) button[id="mobile-menu"] img {
-        content: url(../assets/github-light.svg);
+        content: url(../assets/close.svg);
     }
 
     button {
@@ -188,7 +198,9 @@ header {
             align-items: center;
             justify-content: center;
             gap: 0.15em;
+            text-decoration: none;
             &::after {
+                color: var(--fg);
                 content: "Github";
             }
         }
