@@ -18,8 +18,8 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
     color-scheme: light dark;
     --fg: light-dark(#333, #fff);
     --bg: light-dark(#fff, #333);
-    --accent: light-dark(#1f4ed8, #0f2871);
-    --accent-tekst: light-dark(#fff, #333);
+    --accent: light-dark(#1f4ed8, hsl(200, 80%, 70%));
+    --accent-tekst: light-dark(#fff, #fff);
     --witruimte-s: 1em;
     --knop-padding: 0.5em;
     --knop-radius: 0.5em;
@@ -31,6 +31,15 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
 
 :root[data-theme="dark"] {
     color-scheme: dark;
+
+    header,
+    .recent,
+    .gebruik,
+    label {
+        img {
+            filter: invert(1);
+        }
+    }
 }
 
 /*
@@ -132,15 +141,25 @@ header {
         > a,
         a:visited {
             color: var(--fg);
-            background-color: var(--accent-tekst);
+            border: 1px solid var(--accent-tekst);
             text-decoration: none;
 
             padding: var(--witruimte-s);
         }
     }
+
     .is-open {
         translate: unset;
     }
+
+    button[id="mobile-menu"] {
+        z-index: 2;
+    }
+
+    &:has(.is-open) button[id="mobile-menu"] img {
+        content: url(../assets/github-light.svg);
+    }
+
     button {
         background: none;
         border: none;
@@ -157,6 +176,7 @@ header {
             }
         }
     }
+
     a[href="https://github.com/OpenGemeenten/Iconenset/"] {
         padding: 0 6px;
         img {
@@ -175,7 +195,7 @@ header {
     }
 
     @media (min-width: 800px) {
-        [id="mobile-menu"] {
+        button[id="mobile-menu"] {
             display: none;
         }
 
