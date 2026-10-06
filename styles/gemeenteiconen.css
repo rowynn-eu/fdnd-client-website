@@ -18,11 +18,19 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
     color-scheme: light dark;
     --fg: light-dark(#333, #fff);
     --bg: light-dark(#fff, #333);
-    --accent: light-dark(#1f4ed8, #1f4ed8);
-    --accent-tekst: light-dark(#fff, #fff);
+    --accent: light-dark(#1f4ed8, #0f2871);
+    --accent-tekst: light-dark(#fff, #333);
     --witruimte-s: 1em;
     --knop-padding: 0.5em;
     --knop-radius: 0.5em;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
 }
 
 /*
@@ -33,7 +41,7 @@ navigatie comments gemaakt met https://patorjk.com/software/taag/
 
 body {
     /* tijdelijk alleen light ondersteuning, want dark-mode toggle werkt niet. voor volgende sprint. */
-    color-scheme: light;
+    /* color-scheme: light; */
     margin: 0;
 
     font-family: "Geist", sans-serif;
