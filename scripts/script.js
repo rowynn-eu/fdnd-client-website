@@ -21,6 +21,8 @@ function openMenu() {
 
 // theme toggle. stap 1, pak de button, en de huidige thema. 2. bewaar en laad de gekozen thema. 3. luister forr clicks. 4. bepaal de huidige thema. 5. toggle state.
 
+// david: waarom sla je het niet meteen op? dat als de gebruiker niks heeft opgeslagen, dat het meteen wordt opgelsagen en wordt geladen.
+
 const rootHTML = document.documentElement
 const savedTheme = localStorage.getItem("theme")
 const themeToggle = document.querySelector("#theme-toggle")
@@ -30,6 +32,7 @@ let currentTheme = savedTheme ?? (prefersDark.matches ? "dark" : "light")
 themeToggle.addEventListener("click", toggleTheme)
 
 rootHTML.dataset.theme = savedTheme
+localStorage.setItem("theme", currentTheme)
 
 function toggleTheme() {
     rootHTML.dataset.theme = currentTheme

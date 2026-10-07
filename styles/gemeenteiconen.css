@@ -188,6 +188,7 @@ header {
     }
 
     a[href="https://github.com/OpenGemeenten/Iconenset/"] {
+        margin-left: auto;
         padding: 0 6px;
         img {
             width: 20px;
