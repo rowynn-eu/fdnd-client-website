@@ -304,6 +304,7 @@ function toggleTheme() {
 ```
 
 ## Bronnen
+- <input> search https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/search
 - aria hidden attribute https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 - aria label attribute https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
 - position property https://github.com/fdnd-task/css-challenges/blob/main/docs/challenge_position.md
